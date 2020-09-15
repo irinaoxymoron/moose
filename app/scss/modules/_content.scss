@@ -21,7 +21,7 @@
             @include Montserrat-Bold();
             text-transform: uppercase;
             line-height: 18px;
-            margin: 0 0 0 25px;
+            margin: 0 0 0 20px;
             color: #3F4444;
         }
     }
@@ -46,6 +46,7 @@
     &__text {
 
         margin-bottom: 20px;
+        color: #3F4444;
 
         &--bold {
             @include Montserrat-Bold();
@@ -103,6 +104,11 @@
 
     &__text {
         margin-bottom: 20px;
+        color: #3F4444;
+
+        & span {
+            @include Montserrat-Bold();
+        }
     }
 
     &__img {
@@ -116,5 +122,145 @@
         text-align: center;
         color: #3CCFBB;
         margin-top: 30px;
+    }
+}
+
+// menu
+
+.menu {
+
+    margin-bottom: 60px;
+
+    &__title {
+        margin-bottom: 52px;
+    }
+
+    &__link {
+        width: 314px;
+        display: flex;
+        align-items: center;
+        border: 2px solid #FFF500;
+        border-radius: 25px;
+        padding: 22px 20px;
+        margin-bottom: 13px;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 25px;
+
+        & p {
+            @include Montserrat-Bold();
+            text-transform: uppercase;
+            line-height: 18px;
+            margin: 0;
+            color: #3F4444;
+        }
+    }
+
+    &__icon {
+        min-width: 59px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// news 
+
+.news {
+
+    &__list {
+        max-width: 322px;
+        margin: 55px auto 0;
+    }
+
+    &__item {
+        margin-bottom: 40px;
+        display: inline-block;
+    }
+
+    &__subtitle {
+        @include Montserrat-ExtraBold();
+    }
+
+    &__date {
+        font-size: 12px;
+        line-height: 12px;
+        color: #858585;
+    }
+
+    &__text {
+        margin-top: 20px;
+    }
+}
+
+// price
+
+.price {
+    &__title {
+        @include Montserrat-Bold();
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #3CCFBB;
+
+        & span {
+            font-size: 25px;
+            line-height: 32px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 30px;
+        padding-right: 15px;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &__mark {
+        position: absolute;
+        right: -30px;
+        top: -15px;
+        text-align: center;
+        background: #FFF500;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        z-index: 555;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #3F4444;
+
+        & p:first-child {
+            @include Montserrat-ExtraBold();
+            font-size: 25px;
+            margin: 0;
+        }
+
+        & p:last-child {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+
+    &__text {
+        margin-top: 8px;
     }
 }
