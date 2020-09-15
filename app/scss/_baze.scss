@@ -1,0 +1,98 @@
+body{
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  @include Montserrat-Regular();
+  font-size: $font-size;
+  line-height: $line-height;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 414px;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+}
+
+html{
+  font-size: $font-size; // for REM
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content,
+.header,
+.footer{
+  @include clear-fix();
+}
+
+p{
+  margin: 0 0 $gap;
+}
+
+
+a{
+  text-decoration: none;
+  color: #000;
+  a:hover{
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+menu,
+dir,
+figure{
+  padding: 0;
+  margin: 0;
+  display: block;
+  list-style-type: disc;
+}
+
+label{
+  font-weight: normal;
+  display: block;
+  text-align: left;
+}
+
+li{
+  list-style-position: inside;
+  list-style: none;
+}
+
+body{
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+  &:focus{
+    outline: none;
+  }
+}
+
+footer {
+  margin-top: auto;
+}

@@ -1,0 +1,31 @@
+// navigation
+
+.navigation {
+
+    padding: 30px 10px;
+
+    &__link {
+
+        display: flex;
+        align-items: center;
+        border: 2px solid #3CCFBB;
+        border-radius: 25px;
+        padding: 22px 20px;
+        margin-bottom: 12px;
+
+        & p {
+            @include Montserrat-Bold();
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 18px;
+            margin: 0 0 0 25px;
+            color: #3F4444;
+        }
+    }
+
+    &__icon {
+        min-width: 59px;
+        display: flex;
+        justify-content: center;
+    }
+}
