@@ -92,6 +92,33 @@
     }
 }
 
+.forward {
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: none;
+        background: #FFF500;
+        border-radius: 25px;
+        padding: 22px 20px;
+        margin: 17px 0 40px;
+
+        & p {
+            @include Montserrat-Medium();
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 20px;
+            margin: 0 0 0 25px;
+            color: #3F4444;
+        }
+    }
+    &__icon {
+        min-width: 59px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 // about
 
 .about {
@@ -262,5 +289,117 @@
 
     &__text {
         margin-top: 8px;
+    }
+}
+
+// review
+
+.stars {
+    display: flex;
+    justify-content: center;
+
+    & img {
+        margin: 0 4px;
+    }
+}
+
+.little-stars {
+    display: flex;
+    justify-content: flex-start;
+
+    & img {
+        margin: 0 4px;
+    }
+}
+
+.review {
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__fields {
+        max-width: 314px;
+        margin: 57px auto 0;
+
+        & input {
+            width: 100%;
+            padding: 13px 26px;
+            border: 2px solid #868686;
+            border-radius: 20px;
+            margin-bottom: 22px;
+        }
+
+        & textarea {
+            width: 100%;
+            border: 2px solid #3CCFBB;
+            border-radius: 20px;
+            padding: 22px 26px;
+            margin-bottom: 17px;
+        }
+    }
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    & p {
+        margin: 0;
+    }
+}
+
+.switch-field {
+    display: flex;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	color: #3F4444;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	padding: 12px 20px;
+	margin-right: -1px;
+	border: 2px solid #868686;
+	transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    background-color: #3CCFBB;
+    color: #fff;
+    border: 2px solid #3CCFBB;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+}
+
+.rating {
+
+    margin-bottom: 40px;
+
+    & p {
+        @include Montserrat-Bold();
     }
 }
